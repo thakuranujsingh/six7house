@@ -12,10 +12,13 @@ export const theme = createTheme({
     grey: {
       "700": "#464646",
     },
+    common: {
+      black: "#464646",
+    },
   },
   typography: {
     fontSize: 16, // updated from 14 to 16
-    fontFamily: ["STIXIntegralsUp", "sans-serif"].join(","),
+    fontFamily: ["Open Sans", "sans-serif"].join(","),
     fontWeightBold: 400, // 600 to 400
     h1: {
       fontSize: 80,
@@ -72,7 +75,7 @@ export const theme = createTheme({
           maxWidth: "1122px !important",
         },
         maxWidthMd: {
-          maxWidth: "810px !important",
+          maxWidth: "860px !important",
         },
       },
     },

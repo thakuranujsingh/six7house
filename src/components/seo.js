@@ -10,6 +10,8 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
+const openSans =
+  "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
 function Seo({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
     graphql`
@@ -35,6 +37,7 @@ function Seo({ description, lang, meta, title }) {
       }}
       title={title}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      link={[{ rel: "stylesheet", type: "text/css", href: openSans }]}
       meta={[
         {
           name: `description`,

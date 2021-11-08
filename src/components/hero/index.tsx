@@ -33,6 +33,9 @@ export const HeroSection: React.FC<Props> = ({
         "h1, h2": {
           color: "inherit",
         },
+        "& p": {
+          maxWidth: "530px",
+        },
       }}
     >
       <Container

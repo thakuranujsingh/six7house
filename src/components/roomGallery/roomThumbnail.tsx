@@ -1,10 +1,4 @@
 import { Box } from "@mui/system"
-import {
-  getImage,
-  getSrc,
-  StaticImage,
-  withArtDirection,
-} from "gatsby-plugin-image"
 import React from "react"
 import { navigate, PageProps } from "gatsby"
 
@@ -51,7 +45,7 @@ export const RoomThumbnail: React.FC<RoomThumbnailProps> = ({
           alignItems: "center",
           justifyContent: "center",
           transition: "all .3s",
-          h4: {
+          h3: {
             color: "inherit",
           },
           "& p": {
@@ -62,7 +56,7 @@ export const RoomThumbnail: React.FC<RoomThumbnailProps> = ({
           },
         }}
       >
-        <h4>{heading}</h4>
+        <h3>{heading}</h3>
         <p>{description}</p>
       </Box>
     </Box>

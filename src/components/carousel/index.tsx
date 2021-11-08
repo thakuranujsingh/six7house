@@ -1,17 +1,18 @@
-import { Box } from "@mui/system"
+import { Box, compose, palette, SxProps, spacing, styled } from "@mui/system"
 import React from "react"
 import "react-responsive-carousel/lib/styles/carousel.min.css" // requires a loader
 import { Carousel } from "react-responsive-carousel"
-import { Container } from "@mui/material"
+import { Container, Theme } from "@mui/material"
 
-type data = {
+interface data {
   imgUrl: string[]
+  sx?: SxProps
 }
-export const ReactCarousel: React.FC<data> = props => {
+export const ReactCarousel: React.FC<data> = ({ imgUrl, ...props }) => {
   return (
     <Box
       sx={{
-        padding: "136px 0",
+        padding: "136px 0 160px",
         bgcolor: "#E0E2DF",
         ".carousel.carousel-slider": {
           overflow: "visible",
@@ -36,6 +37,7 @@ export const ReactCarousel: React.FC<data> = props => {
             },
           },
         },
+        ...props.sx,
       }}
     >
       <Container maxWidth="lg">
@@ -48,7 +50,7 @@ export const ReactCarousel: React.FC<data> = props => {
           showArrows={false}
           showStatus={false}
         >
-          {props.imgUrl.map((url, i) => (
+          {imgUrl.map((url, i) => (
             <div>
               <img src={url} key={`slide-${i}`} alt="img" />
             </div>

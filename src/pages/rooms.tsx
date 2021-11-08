@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import heroImg from "../images/delux-room.jpg"
 
-const SecondPage = () => (
+const OurRooms = () => (
   <Layout
     data={{
       heading: "Our Rooms",
@@ -20,4 +20,4 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export default OurRooms
