@@ -1,6 +1,7 @@
 import React from "react"
 import { Container } from "@mui/material"
-import { Box } from "@mui/system"
+import { Box } from "@mui/system";
+import DefaultHeroImg from "../../images/home.jpg"
 
 type Props = {
   heading: string
@@ -21,7 +22,7 @@ export const HeroSection: React.FC<Props> = ({
       sx={{
         height: "100vh",
         width: "100%",
-        background: `url(${imgUrl})`,
+        background: `url(${imgUrl || DefaultHeroImg})`,
         backgroundSize: "cover",
         display: "flex",
         alignItems: isHome ? "center" : "flex-end",

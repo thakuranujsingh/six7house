@@ -13,7 +13,7 @@ import { HeroSection } from "./hero"
 import { Footer } from "./footer/footer"
 
 type Props = {
-  data: {
+  data?: {
     heading: string
     description?: string
     imgUrl: string

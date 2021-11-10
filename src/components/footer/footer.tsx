@@ -43,7 +43,7 @@ export const Footer: React.FC = () => {
                 marginRight: "50px",
                 position: "relative",
                 color: "#EDEDEC",
-                "&:not(:first-child):before": {
+                "&:not(:first-of-type):before": {
                   content: '""',
                   width: "4px",
                   height: "4px",

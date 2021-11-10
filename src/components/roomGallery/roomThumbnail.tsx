@@ -17,6 +17,7 @@ export const RoomThumbnail: React.FC<RoomThumbnailProps> = ({
   return (
     <Box
       onClick={() => navigate(link)}
+      className="thumbnail"
       sx={{
         position: "relative",
         backgroundImage: `url(${imgUrl})`,
@@ -37,7 +38,7 @@ export const RoomThumbnail: React.FC<RoomThumbnailProps> = ({
         sx={{
           color: "#fff",
           background: "rgba(0, 0, 0, 0.22)",
-          padding: "50% 50px 50px",
+          padding: "calc(8% - -160px) 50px 50px",
           width: "100%",
           height: "100%",
           display: "flex",

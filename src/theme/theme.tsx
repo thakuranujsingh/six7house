@@ -86,8 +86,7 @@ export const theme = createTheme({
           fontSize: 20,
           textTransform: "inherit",
           boxShadow: "none",
-          minWidth: "150px",
-          padding: "8px 10px",
+          padding: "6px 10px",
           borderRadius: 0,
           "&:not(:hover)": {
             boxShadow: "none",

@@ -51,8 +51,8 @@ export const ReactCarousel: React.FC<data> = ({ imgUrl, ...props }) => {
           showStatus={false}
         >
           {imgUrl.map((url, i) => (
-            <div>
-              <img src={url} key={`slide-${i}`} alt="img" />
+            <div key={`slide-${i}`}>
+              <img src={url} alt="img" />
             </div>
           ))}
         </Carousel>
