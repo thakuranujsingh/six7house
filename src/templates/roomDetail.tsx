@@ -7,16 +7,16 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { roomsData } from "../data/roomsData"
 import { ReactCarousel } from "../components/carousel"
-import { home } from "../data/home"
 import { RoomGallery } from "../components/roomGallery"
+import { RoomInfo } from "./style"
 
-type RoomData =  PageProps & {
+type RoomData = PageProps & {
   roomName: "premiers" | "junior" | "deluxe" | "senior"
 }
 
 const RoomDetail: React.FC<RoomData> = props => {
-    console.log(props)
-  const key = props.roomName;
+  console.log(props)
+  const key = props.roomName
   const data = roomsData[key]
   return (
     <Layout
@@ -27,9 +27,9 @@ const RoomDetail: React.FC<RoomData> = props => {
       }}
     >
       <Seo title="Our rooms" />
-      <Box sx={{ padding: "130px 0 70px" }}>
+      <Box sx={{ padding: "130px 0 130px" }}>
         <Container maxWidth="lg">
-          <Box sx={{}}>
+          <RoomInfo>
             <h2>{data.name}</h2>
             <p>{data.description}</p>
             <Button variant="outlined" color="primary">
@@ -37,22 +37,26 @@ const RoomDetail: React.FC<RoomData> = props => {
             </Button>
 
             <ul>
-                {data.roomDetail.map((item, i) => <li key={`index-${i}`}>{item}</li>)}
+              {data.roomDetail.map((item, i) => (
+                <li key={`index-${i}`}>{item}</li>
+              ))}
             </ul>
-          </Box>
+          </RoomInfo>
         </Container>
       </Box>
 
-      <ReactCarousel sx={{background: "transparent", padding: "0px 0px 160px"}} imgUrl={data.slider.imgUrl} />
-      <Box sx={{ "img": {width: "100%", height: "auto"} }}>
+      <ReactCarousel
+        sx={{ background: "transparent", padding: "0px 0px 160px" }}
+        imgUrl={data.slider.imgUrl}
+      />
+      <Box sx={{ img: { width: "100%", height: "auto" } }}>
         <img src={data.roomDiagram} alt={data.name} />
       </Box>
       <Box sx={{ padding: "100px 0" }}>
         <Container maxWidth="lg">
-            <RoomGallery {...props} />
+          <RoomGallery {...props} />
         </Container>
-     </Box>
-      
+      </Box>
     </Layout>
   )
 }

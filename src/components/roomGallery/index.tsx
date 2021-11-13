@@ -35,15 +35,17 @@ const Icon = styled(({ ...htmlProps }) => (
   marginBottom: "30px",
 })
 
-
-type RoomGalleryType =  PageProps & {
+type RoomGalleryType = PageProps & {
   roomName?: "premiers" | "junior" | "deluxe" | "senior"
 }
 
-export const RoomGallery: React.FC<RoomGalleryType> = ({roomName, ...props}) => {
-  const galleryData = {...roomsData};
-  if(roomName){
-    delete galleryData[roomName];
+export const RoomGallery: React.FC<RoomGalleryType> = ({
+  roomName,
+  ...props
+}) => {
+  const galleryData = { ...roomsData }
+  if (roomName) {
+    delete galleryData[roomName]
   }
   return (
     <>
@@ -56,8 +58,8 @@ export const RoomGallery: React.FC<RoomGalleryType> = ({roomName, ...props}) => 
           ".thumbnail:first-of-type": {
             gridColumnStart: roomName ? 1 : "",
             gridColumnEnd: roomName ? 3 : "",
-            height: "500px"
-          }
+            height: roomName ? "500px" : null,
+          },
         }}
       >
         {Object.keys(galleryData).map((key, index) => (

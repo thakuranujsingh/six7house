@@ -1,13 +1,10 @@
-import { Button, Container } from "@mui/material"
-import { Box, styled, textAlign } from "@mui/system"
+import {  Container } from "@mui/material"
+import { Box, styled } from "@mui/system"
 import { PageProps, navigate } from "gatsby"
 import * as React from "react"
-import { ReactCarousel } from "../components/carousel"
-
+import { ContactUs } from "../components/forms/contactUs"
 import Layout from "../components/layout"
-import { RoomGallery } from "../components/roomGallery"
 import Seo from "../components/seo"
-import { home } from "../data/home"
 import HeroImg from "../images/delux-room.jpg"
 
 const LocationIcon = styled(({ ...htmlProps }) => (
@@ -39,9 +36,16 @@ const ContactPage: React.FC<PageProps> = props => (
         <p>
           Sent us a message and we will get back to you as quickly as possible!
         </p>
+        <ContactUs />
       </Container>
     </Box>
-    <Box sx={{ padding: "250px 0", textAlign: "center", "@media only screen and (max-width: 767px)": {padding: "170px 0"}  }}>
+    <Box
+      sx={{
+        padding: "250px 0",
+        textAlign: "center",
+        "@media only screen and (max-width: 767px)": { padding: "170px 0" },
+      }}
+    >
       <Container maxWidth="lg">
         <LocationIcon sx={{ marginBottom: "30px" }} />
         <h4>

@@ -63,7 +63,7 @@ export const theme = createTheme({
     },
     h6: {
       fontSize: 20,
-      marginBottom: "20px",
+      marginBottom: "16px",
       fontWeight: 400,
       lineHeight: 1.4,
     },
@@ -91,6 +91,22 @@ export const theme = createTheme({
           "&:not(:hover)": {
             boxShadow: "none",
           },
+        },
+      },
+    },
+    MuiInputLabel: {
+      styleOverrides: {
+        root: {
+          fontSize: "inherit",
+        },
+      },
+    },
+    MuiInput: {
+      styleOverrides: {
+        root: {
+          padding: "6px 0",
+          fontSize: "inherit",
+          marginTop: 0,
         },
       },
     },

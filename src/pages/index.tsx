@@ -35,6 +35,18 @@ const IndexPage: React.FC<PageProps> = props => (
         <RoomGallery {...props} />
       </Container>
     </Box>
+    <Box
+      sx={{
+        padding: "70px 0 100px",
+        minHeight: 500,
+        textAlign: "center",
+        bgcolor: "#E0E2DF",
+      }}
+    >
+      <Container maxWidth="lg">
+        <h3>Explore our Photogallery</h3>
+      </Container>
+    </Box>
   </Layout>
 )
 

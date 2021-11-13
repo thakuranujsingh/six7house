@@ -8,8 +8,8 @@ import deluxHeroImg from "../images/delux-room.jpg"
 
 export const roomsData = {
   premiers: {
-    name: "Premiere Suite",
-    shorName: "Premiere",
+    name: "Premier Suite",
+    shorName: "Premier",
     pageUrl: "/rooms/premier",
     heroImg: premierHeroImg,
     description:

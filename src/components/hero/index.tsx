@@ -1,6 +1,6 @@
 import React from "react"
 import { Container } from "@mui/material"
-import { Box } from "@mui/system";
+import { Box } from "@mui/system"
 import DefaultHeroImg from "../../images/home.jpg"
 
 type Props = {
